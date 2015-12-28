@@ -45,7 +45,7 @@ function parseAlbum (url, callback) {
     album.artworkUrl = $header.find('img.cover-image').attr('src')
     album.genre = $header.find('a.document-subtitle.category span').html()
     album.priceDollars = parsePriceDollars($header)
-    album.ratingPercent = Number($header.find('div.current-rating').css('width').slice(0, -1))
+    album.ratingPercent = +($header.find('div.current-rating').css('width').slice(0, -1))
     album.ratingStars = (album.ratingPercent / 20).toFixed(1)
     album.title = $header.find('.document-title div').html()
     album.tracks = parseTracks($wrapper)
@@ -60,8 +60,8 @@ function parsePriceDollars ($header) {
   var price = $header.find('.music.play-button.buy-button-container .price.buy span').last().html()
   if (price && price.toUpperCase() === 'FREE') {
     return 0
-  } else if (price && price.startsWith('$')) {
-    return Number(price.slice(1))
+  } else if (price && price.slice(0, 1) == '$') {
+    return +(price.slice(1))
   }
 }
 
