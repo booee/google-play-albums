@@ -50,7 +50,7 @@ Called once the album information has been retrieved and parsed, or an error has
 
 ## Example album response
 
-```json
+```
 {
   artist: 'John Williams',
   artworkUrl: 'https://lh3.googleusercontent.com/FqIZu3zCCz71mRpcelSBol9_rGMlCarmdbVHlwza2JsLlOBlZ5_vjsw_dFridF3Tw9cDtF6AmNw=w300',
