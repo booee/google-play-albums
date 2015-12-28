@@ -1,6 +1,7 @@
 # Google Play Albums
 Easily query album info from Google Play Music
 
+[![Build Status](https://travis-ci.org/brad-bowie/google-play-albums.svg)](https://travis-ci.org/brad-bowie/google-play-albums)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 ## Install
